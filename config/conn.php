@@ -2,7 +2,7 @@
 class database
 {
     // Method to establish connection
-    public function connect()
+    public function __construct()
     {
 
         try {

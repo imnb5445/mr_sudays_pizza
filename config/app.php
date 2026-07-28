@@ -2,10 +2,9 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
-define('DB_DATABASE', 'aaaaaaa');
+define('DB_DATABASE', 'db_mrsundays');
 
 include_once('conn.php');
 $db = new database();
-$db->connect();
 
 ?>
