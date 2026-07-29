@@ -32,11 +32,32 @@ include_once('../controller/item-controller.php');
             } else {
                 echo ("No Record Found");
             }
-            ?>
 
+            ?>
+        </select>
+        <select name="addon" id="addon">
+            <?php
+
+            $items = new itemController;
+            $addon = $items->fetch_addons();
+            if ($addon) {
+                foreach ($addon as $row) {
+                    ?>
+                    <option value="<?php echo $row['option_id'] ?>"><?= $row['nama_option'] ?></option>
+                    <?php
+                }
+            } else {
+                echo ("No Record Found");
+            }
+
+            ?>
         </select>
         <button type="submit">Add Item</button>
     </form>
 </body>
 
 </html>
+<script>
+
+
+</script>
