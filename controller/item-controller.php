@@ -31,6 +31,20 @@ class itemController
             return false;
         }
     }
+
+    public function add_items($data)
+    {
+        $data = implode(" ',' ", $data) . " ' ";
+
+        $query = "INSERT INTO item (nama_item, harga, keterangan, group_id, option_id) VALUES ('$data')";
+        $result = $this->conn->query($query);
+
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 ;
 

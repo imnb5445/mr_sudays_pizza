@@ -52,7 +52,7 @@ include_once('../controller/item-controller.php');
 
             ?>
         </select>
-        <button type="submit">Add Item</button>
+        <button type="submit" name="save_items">Add Item</button>
     </form>
 </body>
 
